@@ -1,0 +1,25 @@
+<!-- () ---- Manejan eventos del DOM al codigo-->
+<!-- [] ---- Manejan atributos de las etiquetas html. Manejar datos del codigo al DOM -->
+<!-- [()] ---- Manejan atributos de las etiquetas html. Two-way databinding- -->
+<h4>Agregar personaje</h4>
+<form class="row" (ngSubmit)="emitCharacter()">
+  <input
+      type="text"
+      name="name"
+      [(ngModel)]="character.name"
+      class="form-control mb-2"
+      placeholder="Nombre del personaje">
+
+<!-- Ejemplo de two-way data binding -->
+  <input
+      type="number"
+      name="power"
+      [(ngModel)]="character.power"
+      class="form-control mb-2"
+      placeholder="Poder">
+
+  <button type="submit" class="btn btn-primary">Agregar</button>
+
+<!-- Ejemplo de one-way data binding y de pipe -->
+  <!-- <pre>{{ character | json }}</pre> -->
+</form>
